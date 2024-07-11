@@ -1,3 +1,4 @@
+
 import winston from "winston";
 
 const customLevelOpt = {
@@ -57,4 +58,6 @@ export const addLogger = (req, res, next) => {
     req.logger = logger
     req.logger.info(`Metodo: ${req.method} en ruta ${req.url} - ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`)
     next()
+
 }
+
